@@ -1,0 +1,30 @@
+{
+  "name": "pdf-digisign-example",
+  "version": "1.0.0",
+  "description": "node implementation of pdf digital sign",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfnajid/pdf-digisign-example.git"
+  },
+  "keywords": [
+    "node",
+    "pdf",
+    "digital",
+    "signature",
+    "digisign"
+  ],
+  "author": "rfnajid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rfnajid/pdf-digisign-example/issues"
+  },
+  "homepage": "https://github.com/rfnajid/pdf-digisign-example#readme",
+  "dependencies": {
+    "pdf-lib": "^1.16.0",
+    "pdf.js-extract": "^0.1.5"
+  }
+}
