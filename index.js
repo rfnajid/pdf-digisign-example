@@ -1,17 +1,18 @@
 // import
 require('dotenv').config()
+
 const fs = require("fs");
 const PDFExtract = require("pdf.js-extract").PDFExtract;
 const pdfExtract = new PDFExtract();
 const PDFDocument = require('pdf-lib').PDFDocument;
 
 // dotenv config
-const keyword = process.env.KEYWORD;
+const keywordHolder = process.env.KEYWORD_HOLDER;
+const keywordInsured = process.env.KEYWORD_INSURED;
+const keywordParent = process.env.KEYWORD_PARENT;
 const pdfPath = process.env.PDF_PATH;
 const signPath = process.env.SIGN_PATH;
 const pdfResultPath = process.env.PDF_RESULT_PATH;
-
-console.log('keyword : ', keyword);
 
 pdfExtract.extract(pdfPath, {} /* options*/, function (err, data) {
 	if (err) {
@@ -23,7 +24,11 @@ pdfExtract.extract(pdfPath, {} /* options*/, function (err, data) {
 
     data.pages.forEach((page, pageNum) => {
         page.content.forEach(element => {
-            if(element.str === keyword){
+            if(
+                element.str === keywordHolder ||
+                element.str === keywordInsured ||
+                element.str === keywordParent
+            ){
                 element.page = pageNum;
                 coordinates.push(element);
             }

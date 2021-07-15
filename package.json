@@ -4,6 +4,7 @@
   "description": "node implementation of pdf digital sign",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/rfnajid/pdf-digisign-example#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "pdf-lib": "^1.16.0",
     "pdf.js-extract": "^0.1.5"
   }
