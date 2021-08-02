@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "pwd": "node hummus-password.js",
+    "hummus": "node hummus-index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
