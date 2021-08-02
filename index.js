@@ -14,7 +14,11 @@ const pdfPath = process.env.PDF_PATH;
 const signPath = process.env.SIGN_PATH;
 const pdfResultPath = process.env.PDF_RESULT_PATH;
 
-pdfExtract.extract(pdfPath, {} /* options*/, function (err, data) {
+const pdfExtractOptions = {
+    password: 'password'
+}
+
+pdfExtract.extract(pdfPath, pdfExtractOptions , function (err, data) {
 	if (err) {
 		return console.error(err);
 	}

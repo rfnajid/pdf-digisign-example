@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "pwd": "node hummus-password.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +27,7 @@
   "homepage": "https://github.com/rfnajid/pdf-digisign-example#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
+    "hummus-recipe": "^2.0.1",
     "pdf-lib": "^1.16.0",
     "pdf.js-extract": "^0.1.5"
   }
